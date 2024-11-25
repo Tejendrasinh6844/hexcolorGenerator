@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <title>Generating random Hex color</title>
+<head>
+   <h3>
+      <div id="demo">Mouse-over on this box to get new random color</div>
+      <p id="color"></p>
+   </h3>
+   <style>
+      body {
+         height: 100vh;
+         padding: 1rem;
+         display: grid;
+         place-items: center;
+         font-family: verdana;
+      }
+      h3 {
+         background: white;
+         padding: 1rem 1rem;
+         text-align: center;
+         border-radius: 5px 20px 5px;
+      }
+      p {
+         display: block;
+         padding: 1px;
+         font-size: 20px;
+         font-weight: lighter;
+         font-family: verdana;
+      }
+   </style>
+</head>
+<body>
+   <script>
+      function hex() {
+         const RanHexColor = Math.floor(Math.random()*16777215).toString(16);
+         document.body.style.backgroundColor = "#" + RanHexColor;
+         color.innerHTML = "#" + RanHexColor;
+      }
+      demo.addEventListener("mouseover", hex);
+      hex();
+   </script>
+</body>
+</html>
